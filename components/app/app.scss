@@ -1,0 +1,25 @@
+@import '../../scss/colors.scss';
+@import '../../scss/fonts.scss';
+
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    background-color: $secondaryColor;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    font-family: 'Montserrat', sans-serif;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+}
+

@@ -1,0 +1,38 @@
+@import '../../scss/colors.scss';
+@import '../../scss/fonts.scss';
+
+.search-input-container {
+    width: 65% ;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    input {
+        width: 85%;
+        height: 40%;
+        border: 3px solid $primaryColor;
+        border-radius: 15px;
+        background-color: $inputBackrgoudColor;
+        color: $primaryColor;
+        padding-left: 3%;
+        font-weight: 700;
+        font-size:$inputTextMobile ;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+            transform: translate(40%);
+         }
+
+        &::placeholder {
+            color: $primaryColor;
+            font-family: 'Montserrat', sans-serif;
+            opacity: 1;
+            transition: all 1.2s ease-in-out;
+        }
+    }
+}
