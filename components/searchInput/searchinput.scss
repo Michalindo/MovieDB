@@ -1,5 +1,6 @@
 @import '../../scss/colors.scss';
 @import '../../scss/fonts.scss';
+@import '../../scss/mixins.scss';
 
 .search-input-container {
     width: 65% ;
@@ -7,32 +8,88 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
 
     input {
         width: 85%;
-        height: 40%;
-        border: 3px solid $primaryColor;
-        border-radius: 15px;
+        height: 30%;
+        border: none;
+        border-bottom: 3px solid $primaryColor;
         background-color: $inputBackrgoudColor;
-        color: $primaryColor;
-        padding-left: 3%;
+        outline: none;
+        padding-left: 5%;
+        font-size: $inputTextMobile ;
         font-weight: 700;
-        font-size:$inputTextMobile ;
+        color: $inputTextColor;    
+
+        @include desktop {
+            width: 70%;
+            height: 60%;
+            border: none;
+            border-bottom: 5px solid $primaryColor;
+            font-size: $inputTextDesktop;
+            padding-left: 2%;
+        }
 
         &:focus {
             outline: 0;
         }
 
+
         &:focus::placeholder {
             opacity: 0;
-            transform: translate(40%);
+            transform: translate(50%);
          }
 
         &::placeholder {
-            color: $primaryColor;
-            font-family: 'Montserrat', sans-serif;
+            color: $descriptionLightColor;
             opacity: 1;
             transition: all 1.2s ease-in-out;
+        }
+
+        
+    }
+
+    .suggestions {
+        width: 85%;
+        height: fit-content;
+        border: 3px solid $primaryColor;
+        background-color: $inputBackrgoudColor; 
+        border-top: none;
+        color: $inputTextColor;
+        position: absolute;
+        top: 65%;
+
+        @include desktop {
+            width: 70%;
+            top: 75%;
+            border: 5px solid $primaryColor;
+        }
+
+
+        p {
+            font-size: $hintsTextMobile;
+            min-height: 20px;
+            height: fit-content;
+            font-weight: 700;
+            padding: 5px;
+            border-bottom: 1px dotted $descriptionLightColor;
+
+            @include desktop {
+                font-size: $hintsTextDesktop;
+                min-height: 30px;
+            
+            }
+
+            &:hover {
+                background-color: $primaryColor;
+                cursor: pointer;
+            }
+
+            &:last-child {
+            border-bottom: none
+            }
+            
         }
     }
 }

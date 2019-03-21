@@ -4,16 +4,11 @@ import './poster.scss'
 
 
 class Poster extends Component {
-    constructor(props) {
-      super(props)
-    
-      this.state = {
-      }
-    }
-
     render() {
+        let posterUrl = `https://image.tmdb.org/t/p/w500${this.props.data.poster}`
         return(
-            <div className='poster' style={{backgroundImage: 'url(../../../images/logopng.png)'}}>
+            <div className='poster'>
+                <img src={posterUrl}></img>
             </div>
         )
     }

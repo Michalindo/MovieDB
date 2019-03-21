@@ -1,0 +1,124 @@
+@import '../../../scss/colors.scss';
+@import '../../../scss/fonts.scss';
+@import '../../../scss/mixins.scss';
+
+
+.primary-color {
+    color: $primaryColor;
+    font-weight: 700;
+}
+
+.light-color {
+    color : $descriptionLightColor;
+}
+
+.desc {
+    width: 100%;
+    height: fit-content;
+    margin-top: 5px;
+    padding: 15px;
+    background: $descriptionBackgroundColor;
+    @include desktop {
+        width: 55%;
+        margin-top: 10px;
+        height: calc(100% - 100px);
+    }
+    .desc-overview {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        height: 60%;
+        max-height: 60%;
+        align-content: flex-start;
+
+        h1 {
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: $descriptionTitleMobile;
+            padding-bottom: 10px;
+            height: fit-content;
+            max-height: 40%;
+            width: 100%;
+            @include desktop {
+                font-size: $descriptionTitleDesktop;
+                max-height: 50%;
+            }
+        }
+
+        &-tagline {
+            height: 15%;
+            width: 100%;
+            font-size: $taglineMobile;
+            padding-bottom: 10px;
+            @include desktop {
+                font-size: $taglineDesktop;
+            }
+        }
+
+        &-about {
+            height: fit-content;
+            font-size: $descriptionAboutMobile;
+            padding-bottom: 10px;
+            @include desktop {
+                font-size: $descriptionAboutDesktop;
+            }
+            
+        }
+    }
+        
+    .additional-info {
+        height: 40%;
+        display: flex;
+        flex-flow: column;
+
+        .genre-tags {
+            height: 10%;
+            font-size: $genretagsMobile;
+            padding-bottom: 10px;
+            @include desktop {
+                font-size: $genretagsDesktop;
+            }
+        }
+
+        .producers-list {
+            height: 25%;
+            font-size: $descriptionProducersMobile;
+            padding-bottom: 10px;
+            @include desktop {
+                font-size: $descriptionProducersDesktop;
+            }
+        }
+
+        .relase-info {
+            height: 65%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: row wrap;
+            padding-bottom: 10px;
+            div {
+                width: 50%;
+                span {
+                    display: inline-block;
+                    width: 100%;
+                    font-size: $infotitleMobile;
+                    @include desktop {
+                        font-size: $infotitleDesktop;
+                    }
+                }
+                .infoValue {
+                    padding-top: 5px;
+                    padding-bottom: 10px;
+                    font-size: $descriptionInfoValueMobile;
+                    @include desktop {
+                        font-size: $descriptionInfoValueDesktop;
+                    }
+                }
+            }
+
+            
+        }
+    }
+    
+}
+

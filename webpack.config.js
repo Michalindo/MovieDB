@@ -1,7 +1,7 @@
 var path = require("path");
  
 module.exports = {
-  entry: "./index.jsx",
+  entry: ["whatwg-fetch", "./index.jsx"],
   output: { filename: "out.js", path: path.resolve(__dirname, "js") },
   devtool: 'source-map',
   mode: "development", watch: true,
@@ -32,7 +32,7 @@ module.exports = {
           use: [{
             loader: 'url-loader',
               options: { 
-                limit: 8000, // Convert images < 8kb to base64 strings
+                limit: 2000000, // Convert images < 8kb to base64 strings
                 name: 'images/[hash]-[name].[ext]'
               }
       }]

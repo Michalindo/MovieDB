@@ -8,8 +8,8 @@ import './scss/style.scss'
 
 document.addEventListener('DOMContentLoaded', function(){
 
-
-
+   
+    
     ReactDOM.render(
         <App/>,
         document.getElementById('app')

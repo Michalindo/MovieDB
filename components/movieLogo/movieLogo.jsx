@@ -7,6 +7,7 @@ import './movieLogo.scss'
 class MovieLogo extends Component {
     render() {
         return(
+            
             <div className = "database-logo">
             </div>
         )
